@@ -4,16 +4,15 @@ hyperparameters:
   size_of_attention_head : 4
   num_of_attention_head : 4
   n_embd : 64
+  batch_size : 1024
+  block_size : 256
 
 training:
-  training_epochs : 10
-  eval_patience : 2
-  batch_size : 256
-  block_size : 64
+  epochs : 600
+  patience : 10
   model_checkpoint_path : "language_model.pt"
 
 dataset:
-  output_file_name : "dataset.txt"
+  dataset_file_name : "dataset.txt"
 
-#maximum token the model is allowed to generate
 max_new_tokens : 100
